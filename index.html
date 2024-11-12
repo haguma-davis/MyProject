@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expiry Date Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #f0e7e7;"> <!-- Background for the page remains as is -->
+
+    <!-- First Interface -->
+    <div class="container" id="welcome-screen" style= "background-color: #79470f; padding: 20px; border-radius: 8px;">
+        <h1 style="font-family: Arial, sans-serif; font-size: 20px; color: rgba(8, 226, 73, 0.705);">Welcome to Expiry Date Detector</h1>
+        <p style="font-family: Arial, sans-serif; font-size: 20px; color: rgba(210, 231, 22, 0.705);">Scan QR codes on Packaged Food <br>To check freshness status.</p>
+        <button onclick="showScanner()" style="background-color: #28a745; color: #f0e7e7; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px;">Start Scanning</button>
+    </div>
+
+    <!-- Second Interface -->
+    <div class="container" id="scanner-screen" style="display: none; background-color: #79470f; padding: 20px; border-radius: 8px;">
+        <h1 style="font-family: Arial, sans-serif; font-size: 20px; color: rgba(17, 240, 84, 0.705);">Scan QR Code for Expiry Date</h1> 
+        <p style="font-family: Arial, sans-serif; font-size: 20px; color: rgba(228, 176, 6, 0.705);" ><u>Upload QR code:</u></p>
+        <form action="check_expiry.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="qr_code" accept="image/*" required>
+            <button type="submit" style="background-color: #28a745; color: #f8f6f6; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px;">Check Expiry Status</button>
+        </form>
+    </div>
+
+    <script>
+        function showScanner() {
+            document.getElementById('welcome-screen').style.display = 'none';
+            document.getElementById('scanner-screen').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

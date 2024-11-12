@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #6e3f05;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(24, 14, 14, 0.1);
+}
+
+h1 {
+    color: #0a7207;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #047931;
+    color: rgb(242, 248, 243);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #059b37;
+}
+
+.fresh {
+    color: rgb(7, 54, 13);
+    font-weight: bold;
+}
+
+.expired {
+    color: red;
+    font-weight: bold;
+}
